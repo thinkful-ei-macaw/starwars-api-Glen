@@ -5,10 +5,19 @@ class Display extends Component {
 
 
     render() {
-        console.log(this.props.name)
+
+
         return (
             <section>
-                <p>{this.props.name}</p>
+                {this.props.showData.forEach(data => {
+                    return (
+
+                        <ul>
+                            <li>{data.name}</li>
+                        </ul>
+                    )
+                })}
+
             </section>
         )
     }
